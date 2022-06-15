@@ -1,0 +1,35 @@
+INSERT - Ezzel a paranccsal új sorokat tudunk bevinni az adatbázisba
+Szintaktikája:
+    INSERT INTO table_name (column1, column2, ... )
+    VALUES (value1, value2, ... )
+    ;
+Feladatok:
+1.  Adj hozzá két instruktort
+    INSERT INTO Instructor(ins_id, lastname, firstname, city, country)
+    VALUES(5, 'Doe', 'John', 'Sydney', 'AU'), (6, 'Doe', 'Jane', 'Dhaka', 'BD');
+
+2.  Adj hozzá még egy instruktort
+    INSERT INTO Instructor(ins_id, lastname, firstname, city, country)
+    VALUES(8, 'Ryan', 'Steve', 'Barlby', 'GB'), (9, 'Sannareddy', 'Ramesh', 'Hyderabad', 'IN');
+
+
+UPDATE - Ezzel a paranccsal tudjuk frissíteni a sorokat
+Szintaktikája:
+    UPDATE table_name
+    SET column1 = value1, column2 = value2, ...
+    WHERE condition
+    ;
+
+Feladatok:
+1.  Frissítsük a City-t ahol Sandip lakik
+    UPDATE Instructor 
+    SET city='Toronto' 
+    WHERE firstname="Sandip";
+
+2. 
+
+DELETE - Ezzel tudunk sorokat törölni
+Szintaktikája:
+    DELETE FROM table_name
+    WHERE condition
+    ;

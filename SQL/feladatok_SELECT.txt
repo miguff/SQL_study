@@ -1,0 +1,22 @@
+.schema megadja, hogy hogy néz ki a táblázat, mi van benne stb
+
+1.  Hogyan tudjuk kiszedni minden elemét a filmnek?
+SELECT * FROM Film_loc;
+
+2.  Szeretnénk megkapni minen filmről az információt, de csak a Rendező
+film név és írő neve kell
+
+SELECT Title, Director, Writer from Film_loc;
+
+3.  Film nevek kellenek, amik a 21. században jelentek meg, és a film helyszínét is illetve a
+kiadás évét
+SELECT Title, Locations, "Release Year" From Film_loc where "Release Year" >= 2001;
+
+4.  Irassuk ki az fun facteket meg a film helyeket
+Select "Fun facts", locations from film_loc;
+
+5.  Írassuk az összes filmet ami a 20. században került bemutatásra
+SELECT Title, Locations, "Release Year" From Film_loc where "Release Year" <= 2000;
+
+6. Azokat írjuk ki, amiket nem James Cameron rendezett
+SELECT Title, "Production Company", locations, "Release Year" from Film_loc where writer <> "James Cameron";
