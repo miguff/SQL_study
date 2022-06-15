@@ -32,4 +32,4 @@ DELETE - Ezzel tudunk sorokat törölni
 Szintaktikája:
     DELETE FROM table_name
     WHERE condition
-    ; Hello there
+    ;
