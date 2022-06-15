@@ -1,0 +1,54 @@
+COUNT - Megszámolja, hogy az adott kritériumból hány darab van
+
+
+1.  Retrieve the number of rows from the "FilmLocations" table
+SELECT COUNT (*) From film_loc; 
+
+2.  Retrieve the number of locations of the films which are written by James
+SELECT COUNT(Locations) from film_loc where writer = "James Cameron";
+
+3.  Retrieve the number of locations of the films which are directed by Woody Allen.
+SELECT COUNT(Locations) FROM FilmLocations WHERE Director="Woody Allen";
+
+4.  Retrieve the number of films shot at Russian Hill.
+Select Count(Title) from film_loc where locations = "Russian Hill";
+
+5.  Retrieve the number of rows having a release year older than 1950 from the "FilmLocations" table.
+Select Count(*) from film_loc where "Release Year" < 1950;
+
+DISTINCT - Csak egy érték lezs, a duplikációkat nem veszi figyelembe
+
+1.  Retrieve the name of all films without any repeated titles.
+Select Distinct(Title) from film_loc;
+
+
+2.  Retrieve the number of release years of the films distinctly, produced by Warner Bros. Pictures.  
+SELECT Count(Distinct("Release Year")) from film_loc where "Production Company" = "Warner Bros. Pictures"; 
+
+
+3.  Retrieve the name of all unique films released in the 21st century and onwards, along with their release years.
+Select Distinct Title, "Release Year" from film_loc where "Release Year" > 2000; 
+
+4.  Retrieve the names of all the directors and their distinct films shot at City Hall.
+Select Distinct Director, Title from film_loc where locations = "City Hall";
+
+5.  Retrieve the number of distributors distinctly who distributed films acted by Clint Eastwood as 1st actor.
+Select Count(Distinct Distributor) from film_loc where "Actor 1" = "Clint Eastwood";
+
+LIMIT - meghatározza, hogy hányat jelenítsen meg max
+1.  Retrieve the first 25 rows from the "FilmLocations" table.
+Select * from film_loc limit 25;
+
+2.  Retrieve the first 15 rows from the "FilmLocations" table starting from row 11.
+Select * from film_loc limit 15 offset 10;
+
+3.  Retrieve the name of first 50 films distinctly.
+Select Distinct Title from film_loc limit 50;
+
+4.  Retrieve first 10 film names distinctly released in 2015.
+Select Distinct Title from film_loc where "Release Year" = 2015 limit 10;
+
+5.  Retrieve the next 3 film names distinctly after first 5 films released in 2015.
+Select Distinct Title from film_loc where "Release Year" = 2015 limit 3 offset 5;
+
+alma
