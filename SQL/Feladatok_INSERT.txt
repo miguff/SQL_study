@@ -26,10 +26,15 @@ Feladatok:
     SET city='Toronto' 
     WHERE firstname="Sandip";
 
-2. 
-
 DELETE - Ezzel tudunk sorokat törölni
 Szintaktikája:
     DELETE FROM table_name
     WHERE condition
     ;
+
+Feladatok:
+1.  Remove the instructor record of Doe whose id is 6.
+    DELETE FROM Instructor where ins_id = 6;
+
+2.  Remove the instructor record of Barlby
+    DELETE FROM Instructor where city = "Barlby";
